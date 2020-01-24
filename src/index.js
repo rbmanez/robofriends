@@ -1,9 +1,9 @@
 import React from 'react';
-//reactDOM is react for the web (react native is for mobile)
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
+// css styling library similar to bootstrap
 import 'tachyons';
 
 ReactDOM.render(<App />,

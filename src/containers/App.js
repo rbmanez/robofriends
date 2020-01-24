@@ -25,15 +25,18 @@ class App extends React.Component {
 	}
 
 	render(){
+		// filters this.state.robot and checks if it has this.state.searchField (user's input)
 		const filteredRobots = this.state.robots.filter(robot => {
 			return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase());
 		})
+		// 
 		if (this.state.robots.length === 0){
 			return <h1>Loading</h1>
 		} else {
 			return (
 				<div className="tc">
 					<h1 className="f1">RoboFriends</h1>
+					<a href="https://github.com/rbmanez/robofriends" target="_blank">See code on GitHub</a>
 					<SearchBox searchChange={this.onSearchChange}/>
 					<Scroll>
 						<ErrorBoundary>
